@@ -27,10 +27,10 @@
   html,body{margin:0;padding:0;scroll-behavior:smooth;}
   body{background:#0e0e0f;color:#fff;font-family:'Inter',sans-serif;}
   .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;vertical-align:middle;}
-  .glass-panel{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
-  .glass-card{background:rgba(38,38,39,0.4);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
-  .glass-effect{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
-  .text-glow{text-shadow:0 0 30px rgba(0,112,255,0.3);}
+  .glass-panel{background:#131314;}
+  .glass-card{background:#1a191b;}
+  .glass-effect{background:#131314;}
+  .text-glow{}
 
   /* Navigation */
   .nav-link{position:relative;transition:color 0.3s;color:#94a3b8;text-decoration:none;font-weight:500;}
@@ -88,7 +88,7 @@
 <body>
 
 <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
-<nav id="navbar" class="bg-slate-950/40 backdrop-blur-xl sticky top-0 z-50 shadow-[0_20px_40px_-15px_rgba(0,112,255,0.1)] border-b border-white/5">
+<nav id="navbar" class="sticky top-0 z-50 border-b" style="background:#0e0e0f;border-color:#1e1e1f;">
   <div class="flex justify-between items-center w-full px-8 py-5 max-w-screen-2xl mx-auto">
     <button onclick="navigate('home')" class="text-2xl font-black tracking-tighter text-slate-50 font-headline hover:text-primary transition-colors bg-transparent border-none cursor-pointer" style="color:#f8fafc;">SHAMBKA</button>
     <div class="hidden md:flex items-center gap-10 font-['Inter'] tracking-tight">
@@ -98,7 +98,7 @@
       <button onclick="navigate('contact')" class="nav-link" id="nav-contact" style="background:none;border:none;cursor:pointer;font-size:1rem;">Contact</button>
     </div>
     <div class="flex items-center gap-4">
-      <button onclick="navigate('contact')" class="bg-primary-dim text-on-primary-fixed px-6 py-2.5 rounded-xl font-semibold text-sm hover:shadow-[0_0_20px_rgba(0,112,255,0.4)] transition-all active:scale-95" style="background:#006df8;color:#000;border:none;cursor:pointer;">Book a Call</button>
+      <button onclick="navigate('contact')" class="px-6 py-2.5 rounded-xl font-semibold text-sm hover:opacity-90 transition-all active:scale-95" style="background:#006df8;color:#000;border:none;cursor:pointer;">Book a Call</button>
       <button class="md:hidden text-slate-400 hover:text-slate-100 bg-transparent border-none cursor-pointer" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
         <span class="material-symbols-outlined" style="color:#94a3b8;">menu</span>
       </button>
@@ -116,22 +116,20 @@
 <div id="page-home" class="page active">
 
   <!-- Hero -->
-  <section class="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden">
-    <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary-dim/20 rounded-full blur-[120px]"></div>
-    <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary-container/20 rounded-full blur-[120px]"></div>
+  <section class="relative min-h-[90vh] flex flex-col items-center justify-center px-6">
     <div class="max-w-screen-xl mx-auto text-center relative z-10">
       <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary-dim/10 border border-primary-dim/20 au1">
         <span class="font-label text-sm font-medium text-primary tracking-widest">NEXT-GEN DIGITAL ARCHITECTURE</span>
       </div>
       <h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter leading-[0.9] mb-8 au2">
         We Build Digital <br/>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-fixed">Experiences</span> That<br/>Drive Growth
+        <span style="color:#006df8;">Experiences</span> That<br/>Drive Growth
       </h1>
       <p class="max-w-2xl mx-auto text-lg md:text-xl text-on-surface-variant leading-relaxed mb-12 au3">
         Shambka is a premium digital solutions agency dedicated to transforming brands through elite web development, strategic marketing, and iconic branding.
       </p>
       <div class="flex flex-col md:flex-row items-center justify-center gap-6 au4">
-        <button onclick="navigate('contact')" class="w-full md:w-auto bg-primary-dim text-on-primary-fixed px-10 py-4 rounded-xl font-bold text-lg hover:shadow-[0_0_40px_rgba(0,112,255,0.5)] transition-all" style="background:#006df8;color:#000;border:none;cursor:pointer;">Get Started</button>
+        <button onclick="navigate('contact')" class="w-full md:w-auto px-10 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all" style="background:#006df8;color:#000;border:none;cursor:pointer;">Get Started</button>
         <button onclick="navigate('portfolio')" class="w-full md:w-auto glass-panel border border-outline-variant/30 text-on-surface px-10 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-high transition-all" style="cursor:pointer;border:1px solid rgba(72,72,73,0.3);">View Portfolio</button>
       </div>
     </div>
@@ -191,7 +189,6 @@
       <div class="flex flex-col lg:flex-row items-stretch">
         <div class="lg:w-1/2 relative h-[400px] lg:h-auto overflow-hidden">
           <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Mj1KAVlCfTrt1hi71zuZXSCxRDlPsegD_6qNCkVV-UiXRtW_U9DcKW5iGhdeASs6Km0NDvk4-BsKIS09nQJork2DAcG0GE8CS0NtLXqEXqISi_QhCah1CSyNBS5GP8w_yXmHaNwuBClNzEG_EdOd26ESjMzh0JS-GD_AXrqpvsZbGNvRL66iQe1snw5muEOw06QiB8J-Q9vrFa3ivJYIsbk_EfsoKpbGpoKeykt3U9FywcAPviVSdU-o1mvcd4xxuvGgQcOahyk" alt="Nexus Tech"/>
-          <div class="absolute inset-0 bg-gradient-to-r from-surface-container-low via-transparent to-transparent hidden lg:block"></div>
         </div>
         <div class="lg:w-1/2 p-12 lg:p-20 flex flex-col justify-center">
           <span class="font-label text-primary-fixed-dim font-semibold tracking-[0.2em] mb-6" style="color:#5b90ff;">CASE STUDY: NEXUS TECH</span>
@@ -223,12 +220,11 @@
 
   <!-- CTA -->
   <section class="py-20 px-8">
-    <div class="max-w-4xl mx-auto glass-panel p-16 rounded-[2rem] border border-primary-dim/20 text-center relative overflow-hidden" style="border:1px solid rgba(0,109,248,0.2);">
-      <div class="absolute -top-24 -left-24 w-64 h-64 bg-primary-dim/10 rounded-full blur-[80px]"></div>
-      <div class="relative z-10">
+    <div class="max-w-4xl mx-auto glass-panel p-16 rounded-[2rem] text-center" style="border:1px solid #1e2b4a;">
+      <div>
         <h2 class="text-4xl md:text-5xl font-headline font-black mb-8 leading-tight">Ready to Build Your Monument?</h2>
         <p class="text-on-surface-variant text-lg mb-10 max-w-xl mx-auto">Let's collaborate to create a digital experience that defines your industry.</p>
-        <button onclick="navigate('contact')" class="bg-primary-dim text-on-primary-fixed px-12 py-5 rounded-xl font-bold text-xl hover:shadow-[0_0_50px_rgba(0,112,255,0.4)] transition-all" style="background:#006df8;color:#000;border:none;cursor:pointer;">Schedule a Consultation</button>
+        <button onclick="navigate('contact')" class="px-12 py-5 rounded-xl font-bold text-xl hover:opacity-90 transition-all" style="background:#006df8;color:#000;border:none;cursor:pointer;">Schedule a Consultation</button>
       </div>
     </div>
   </section>
@@ -238,13 +234,11 @@
 <div id="page-services" class="page">
 
   <!-- Hero -->
-  <section class="relative py-32 overflow-hidden">
-    <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary-dim/10 blur-[120px] rounded-full"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] blur-[100px] rounded-full" style="background:rgba(238,147,238,0.05);"></div>
-    <div class="relative z-10 max-w-screen-2xl mx-auto px-8">
+  <section class="py-32">
+    <div class="max-w-screen-2xl mx-auto px-8">
       <div class="max-w-3xl">
         <span class="font-label text-primary tracking-[0.2em] uppercase text-sm mb-6 block">Our Expertise</span>
-        <h1 class="font-headline text-7xl md:text-8xl font-black tracking-tighter mb-8 text-glow">Digital <br/><span style="color:#006df8;">Monuments.</span></h1>
+        <h1 class="font-headline text-7xl md:text-8xl font-black tracking-tighter mb-8">Digital <br/><span style="color:#006df8;">Monuments.</span></h1>
         <p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl font-light">We engineer experiences that transcend the ordinary. Our architectural approach ensures your brand doesn't just exist—it leads.</p>
       </div>
     </div>
@@ -264,12 +258,12 @@
           <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1" style="color:#006df8;">check_circle</span><span class="font-medium">High-Performance E-commerce Engines</span></li>
           <li class="flex items-start gap-3"><span class="material-symbols-outlined mt-1" style="color:#006df8;">check_circle</span><span class="font-medium">Progressive Web Applications (PWA)</span></li>
         </ul>
-        <button onclick="navigate('contact')" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold hover:shadow-[0_0_30px_rgba(0,112,255,0.4)] transition-all" style="background:#006df8;color:#000;border:none;cursor:pointer;">Start a Web Project <span class="material-symbols-outlined">arrow_forward</span></button>
+        <button onclick="navigate('contact')" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all" style="background:#006df8;color:#000;border:none;cursor:pointer;">Start a Web Project <span class="material-symbols-outlined">arrow_forward</span></button>
       </div>
       <div class="lg:col-span-5">
         <div class="glass-card rounded-3xl p-8 aspect-square flex flex-col justify-center items-center text-center relative overflow-hidden group">
           <img class="w-full h-full object-cover absolute inset-0 opacity-40 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWWSBUs3d9WLgCGQqHHfGVo0sKDHQc6rPFr4EJsXSardOHQSS1GNxsprIBzqE0mLa5S3hcPsCmqUj4AIuDAAvmLDouZLViQsCbTN_db9S-mQkjkeX8nw5GEadSisBY71cK8v9CcjLUFzMIatOTSgMMlycknqpIokTtmA43O4o0PpdgnkKs7yKUwgwiGXmBcUBwIM8dW4xKHOqNtCgGl5fs2XpzW05cTxTDE52ZocrTe2k8wLt7wqitaj-D4XK9DpIEOidvys9hPgg" alt="Web Dev"/>
-          <div class="relative z-10 bg-surface-container-high/80 p-6 rounded-2xl backdrop-blur-md" style="border:1px solid rgba(72,72,73,0.3);">
+          <div class="relative z-10 p-6 rounded-2xl" style="background:#201f21;border:1px solid #262627;">
             <span class="font-label text-primary text-xs uppercase tracking-widest mb-2 block">System Logic</span>
             <div class="text-2xl font-bold font-headline mb-4">Core Performance</div>
             <div class="flex gap-2 justify-center">
@@ -286,9 +280,8 @@
   <!-- CTA Banner -->
   <section class="py-12">
     <div class="max-w-screen-2xl mx-auto px-8">
-      <div class="rounded-[2rem] p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-10 overflow-hidden relative" style="background:#006df8;">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-        <div class="relative z-10 max-w-xl">
+      <div class="rounded-[2rem] p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-10" style="background:#006df8;">
+        <div class="max-w-xl">
           <h3 class="text-4xl md:text-5xl font-black font-headline tracking-tighter mb-4 leading-tight" style="color:#000;">Ready to build your digital monument?</h3>
           <p class="text-lg" style="color:rgba(0,0,0,0.7);">Let's discuss how we can elevate your brand through superior engineering.</p>
         </div>
@@ -341,7 +334,7 @@
         </div>
         <div class="md:col-span-2 glass-card rounded-[2rem] p-10 flex items-center gap-8 relative overflow-hidden">
           <div class="flex-1"><h3 class="text-2xl font-bold font-headline mb-2">Brand Voice</h3><p class="text-sm text-on-surface-variant">Editorial guidelines ensuring consistency across every touchpoint.</p></div>
-          <div class="w-32 h-32 rounded-full flex items-center justify-center shrink-0" style="background:linear-gradient(to top right,rgba(238,147,238,0.2),rgba(0,109,248,0.2));"><span class="material-symbols-outlined text-4xl">auto_awesome</span></div>
+          <div class="w-32 h-32 rounded-full flex items-center justify-center shrink-0" style="background:#262627;"><span class="material-symbols-outlined text-4xl">auto_awesome</span></div>
         </div>
         <div class="glass-card rounded-[2rem] p-8 flex flex-col justify-between">
           <span class="font-label text-xs uppercase" style="color:#006df8;">Phase 01</span>
@@ -427,7 +420,7 @@
   <section class="px-8 max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 pb-32">
     <div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low project-card" data-cat="web" style="height:600px;">
       <img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6DdDNWt3T4u_42fZpkVa3L2n3bcDvb-XQL2KLkf0KfgXd2WOBPXH_SHy5kHx8XMDPcgjYivR2L-M1d8HMpTGPgZxf8csj9ehaq0aWTYcTVEYUnLwyYGeb9vR5zMPFzbVyC403NUwWPrIL2-HK63TOaE-mhQJkBv-pSZpFTWwEoFnhpM1bECtbPyQImQKnbzh4Bkor3KrzzgtMAIQShgkdDJ6iWWbQKZLQiCsI5Y3E6U2qFOUGs25TWtoCMIrDxYeSsatDT5AZIq8" alt="Nexus Capital"/>
-      <div class="absolute inset-0" style="background:linear-gradient(to top,#0e0e0f,rgba(14,14,15,0.2),transparent);"></div>
+      <div class="absolute inset-0" style="background:rgba(14,14,15,0.55);"></div>
       <div class="absolute bottom-0 left-0 p-10 w-full">
         <div class="flex justify-between items-end">
           <div><span class="font-label text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Fintech / Web Engineering</span><h3 class="text-4xl font-headline font-bold text-white mb-2">Nexus Capital</h3><p class="text-on-surface-variant font-medium">A frictionless global trading infrastructure.</p></div>
@@ -442,12 +435,12 @@
     </div>
     <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low project-card" data-cat="marketing" style="min-height:400px;">
       <img class="absolute inset-0 w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXvqrpxnnR__liS1cVQwOEXh8_AWJCh5vBe53v4Zo_-1EUb-50koC3XuNCpOGEjX4tT5NGRwW5h_YHH5UBdwlMfZ3lfelIA_d7E-8qDLOem99LcFy0jnsxEYURVujJ0tQ41NANc883P4ANTQI4jNqCr-yXBP6NduKOy11CsKbUbSN8aal0ZXtnFuHWXWHkwXPxdFm3C8CRGCvs6u0bBXpal10mHVJN1wSJgCXSaWsLkS8kKL23VVwe5JBuejUyf6EeCMXxN8OYnr0" alt="Synthetix AI"/>
-      <div class="absolute inset-0" style="background:linear-gradient(to top right,rgba(14,14,15,0.8),transparent);"></div>
+      <div class="absolute inset-0" style="background:rgba(14,14,15,0.5);"></div>
       <div class="absolute bottom-0 left-0 p-8"><span class="font-label text-primary text-xs font-bold uppercase tracking-widest mb-2 block">AI SaaS / Marketing</span><h3 class="text-2xl font-headline font-bold text-white mb-2">Synthetix AI</h3><div class="mt-4"><span class="text-2xl font-headline font-black text-white block leading-none">150k+</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Monthly Active Users</span></div></div>
     </div>
     <div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low project-card" data-cat="web" style="min-height:300px;">
       <img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPRPFWJJp-TbPMF1upkWO1X9yJM_BdzzFOQGMZEUJx4g1egVgiAPSKqDW2wELW7AZlcp_0JmlDSlTDLKqRjMZgEkKvB3HOTkEps8Wm7oko3QYxqiSISOlPj8jg7p4HkbFIDrthA_-gRC9aVZ81EiMLGQ" alt="Vanguard Fleet"/>
-      <div class="absolute inset-0 p-10 flex flex-col justify-end" style="background:linear-gradient(to top,#0e0e0f,transparent);">
+      <div class="absolute inset-0 p-10 flex flex-col justify-end" style="background:rgba(14,14,15,0.55);">
         <div class="flex justify-between items-end">
           <div><span class="font-label text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Logistics / Web Platform</span><h3 class="text-3xl font-headline font-bold text-white mb-2">Vanguard Fleet</h3><p class="text-on-surface-variant hidden md:block">Real-time supply chain optimization.</p></div>
           <div class="text-right"><span class="text-4xl font-headline font-black text-primary block leading-none tracking-tighter">-35%</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Operational Costs</span></div>
@@ -457,8 +450,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="relative px-8 py-32 overflow-hidden">
-    <div class="absolute inset-0 -z-10 flex items-center justify-center opacity-30"><div class="w-[800px] h-[800px] rounded-full blur-[120px]" style="background:rgba(138,172,255,0.2);"></div></div>
+  <section class="px-8 py-32">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-4xl md:text-7xl font-headline font-black tracking-tighter mb-10 leading-none">Ready to build something <span class="text-primary italic">together?</span></h2>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -474,7 +466,7 @@
   <!-- Hero -->
   <section class="relative flex items-center pt-20 pb-32 overflow-hidden" style="min-height:716px;">
     <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 z-10" style="background:linear-gradient(to bottom,transparent,#0e0e0f);"></div>
+      <div class="absolute inset-0 z-10" style="background:rgba(14,14,15,0.6);"></div>
       <img class="w-full h-full object-cover opacity-30 grayscale" style="position:absolute;inset:0;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWV1P6fVS0HnQ4YfozAthoEOa_-KkUQ0FOw7OIb_OxjytlqOWTpa9PX6D6yhbSOTN2YhNit9jqJ6M6qAOfNZdcViNjPLhq662_wks0r0wJ2p8DhdcNSIkiaxT4RHanrj7yn3FmKHI7HMArflVOp4qTpJrZg-ItSFaPP3owY6uvHzZcdIZvMraz1uEu9R2j_7yUsis7PkCcAhX5g9nmro3FmZlAMzyDeNWy30JHd-8OJyWxdnl-0ZFkad91OTHwfE5_DqkdcTR_1qY" alt="Studio"/>
     </div>
     <div class="container mx-auto px-8 relative z-20">
@@ -553,7 +545,6 @@
           <div class="aspect-video rounded-xl overflow-hidden glass-panel p-2">
             <img class="w-full h-full object-cover rounded-lg opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEq6MgTA4YCdHHdn7jigSKBHRSBTPz_gVyhL1FYUSkvUdtc2y88RAKdDCaxkAWp_9QTnpWzxwbdJ7KxFxRc3g-JXJBeGU-gQUih-M-geTWEqHF3Hp_CgHk0ISz5MDa1DPUSisXJzbCy0dxQHjZI-C_Tfe_kqWadB7KOglRhYATTkqs9VdXaTESHN25BsjTjs4dw9VzJIcVmbkKvB3HOTkEps8Wm7oko3QYxqiSISOlPj8jg7p4HkbFIDrthA_-gRC9aVZ81EiMLGQ" alt="Culture"/>
           </div>
-          <div class="absolute -bottom-8 -right-8 w-64 h-64 rounded-full blur-3xl -z-10" style="background:rgba(0,109,248,0.1);"></div>
         </div>
         <div>
           <span class="font-label text-primary text-sm tracking-widest mb-6 block">STUDIO CULTURE</span>
@@ -579,7 +570,7 @@
       <div class="max-w-3xl mx-auto glass-panel p-16 rounded-xl" style="border:1px solid rgba(72,72,73,0.1);">
         <h2 class="text-4xl font-headline font-bold mb-8">Ready to build your digital monument?</h2>
         <p class="text-on-surface-variant mb-12 text-lg">Let's discuss how architectural design can redefine your growth trajectory.</p>
-        <button onclick="navigate('contact')" class="font-bold px-10 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(138,172,255,0.4)] transition-all" style="background:#8aacff;color:#000;border:none;cursor:pointer;">Start a Project</button>
+        <button onclick="navigate('contact')" class="font-bold px-10 py-4 rounded-xl hover:opacity-90 transition-all" style="background:#8aacff;color:#000;border:none;cursor:pointer;">Start a Project</button>
       </div>
     </div>
   </section>
@@ -587,7 +578,6 @@
 
 <!-- ═══════════════════════════════ PAGE: CONTACT ═══════════════════════════════ -->
 <div id="page-contact" class="page">
-  <div class="absolute top-0 right-0 w-full h-[600px] pointer-events-none -z-10 opacity-30" style="background:radial-gradient(ellipse at 80% -20%,rgba(0,109,248,0.3),transparent 60%);"></div>
   <section class="max-w-screen-2xl mx-auto px-8 pt-24 pb-32">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
@@ -604,7 +594,7 @@
           <div><h3 class="font-headline font-bold text-xl mb-1">Message Sent!</h3><p class="text-on-surface-variant">We'll get back to you within 24 hours.</p></div>
         </div>
 
-        <form id="contactForm" class="glass-effect rounded-full p-8 md:p-12 space-y-8" style="border:1px solid rgba(255,255,255,0.05);" onsubmit="handleFormSubmit(event)">
+        <form action="https://formspree.io/f/mqpzlybe" method="POST" id="contactForm" class="glass-effect rounded-full p-8 md:p-12 space-y-8" style="border:1px solid rgba(255,255,255,0.05);" onsubmit="handleFormSubmit(event)">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="space-y-2">
               <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-medium">Full Name</label>
@@ -630,7 +620,7 @@
             <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-medium">Message</label>
             <textarea class="w-full bg-surface-container-highest border-none rounded-sm px-4 py-4 text-on-surface focus:ring-1 focus:ring-primary-dim/40 transition-all placeholder:text-on-surface-variant/30 resize-none" placeholder="Tell us about the monument you want to build..." rows="5" required></textarea>
           </div>
-          <button class="group flex items-center justify-center gap-3 w-full py-5 rounded-xl font-bold text-lg hover:shadow-[0_0_30px_rgba(0,112,255,0.4)] transition-all" type="submit" style="background:#006df8;color:#000;border:none;cursor:pointer;">
+          <button class="group flex items-center justify-center gap-3 w-full py-5 rounded-xl font-bold text-lg hover:opacity-90 transition-all" type="submit" style="background:#006df8;color:#000;border:none;cursor:pointer;">
             Send Message <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>
         </form>
@@ -686,7 +676,7 @@
   <section class="w-full px-8 mb-24">
     <div class="h-[400px] rounded-full overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
       <img alt="Global HQ" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3ImAlhhYdbxaRrSKUgTokdci7fF5QaTVgf_jPzG9Fegyqgx8RMY2CSFNqdvlmq4SPOJo_UYhqcsHySlGdlKjnp_e5lIqs6rVb611lX5fpwQFbxZGX_gunReBAA_CHAybRkTPqUxveiybeuz61fVs6uqhKgKgcf_yyI7bbjruW1jJU_k_w3JW72sdHmn41nkH5mOlX08ZyuEwXGXWxJaHJhsFGB5En6Hpy15z50C8E4sgpiYvJJdaDrN8uel-pRAAgGi-xgE0zn0s"/>
-      <div class="absolute inset-0" style="background:linear-gradient(to top,#0e0e0f,transparent);"></div>
+      <div class="absolute inset-0" style="background:rgba(14,14,15,0.5);"></div>
       <div class="absolute bottom-12 left-12">
         <div class="p-6 rounded-full" style="background:rgba(14,14,15,0.8);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1);">
           <p class="font-label text-xs uppercase tracking-widest font-bold mb-1" style="color:#006df8;">Global HQ</p>
