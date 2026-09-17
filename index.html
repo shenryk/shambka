@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -8,13 +8,13 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="styles/styles.css" rel="stylesheet"/>
 <script>
   tailwind.config = {
-    darkMode: "class",
     theme: {
       extend: {
         colors: {
-          "surface-container-low": "#131314","primary": "#8aacff","surface-container-lowest": "#000000","background": "#0e0e0f","primary-fixed-dim": "#5b90ff","outline-variant": "#484849","primary-fixed": "#739eff","secondary-container": "#283ca1","outline": "#767576","surface-container-high": "#201f21","surface-container": "#1a191b","surface-variant": "#262627","on-surface": "#ffffff","primary-container": "#739eff","primary-dim": "#006df8","surface-container-highest": "#262627","surface": "#0e0e0f","secondary": "#8596ff","on-primary": "#002b6b","on-primary-fixed": "#000000","surface-dim": "#0e0e0f","on-surface-variant": "#adaaab","surface-bright":"#2c2c2d","tertiary-dim":"#ee93ee"
+          "surface-container-low": "#ffffff","primary": "#0b4a4f","surface-container-lowest": "#ffffff","background": "#ffffff","primary-fixed-dim": "#febe15","outline-variant": "#d9c57d","primary-fixed": "#febe15","secondary-container": "#febe15","outline": "#8aa5a7","surface-container-high": "#ffffff","surface-container": "#ffffff","surface-variant": "#fff8df","on-surface": "#0b4a4f","primary-container": "#febe15","primary-dim": "#febe15","surface-container-highest": "#fff8df","surface": "#ffffff","secondary": "#febe15","on-primary": "#0b4a4f","on-primary-fixed": "#0b4a4f","surface-dim": "#ffffff","on-surface-variant": "#0b4a4f","surface-bright":"#ffffff","tertiary-dim":"#601e19"
         },
         fontFamily: { "headline": ["Inter"], "body": ["Inter"], "label": ["Space Grotesk"] },
         borderRadius: {"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
@@ -22,68 +22,6 @@
     },
   }
 </script>
-<style>
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;scroll-behavior:smooth;}
-  body{background:#0e0e0f;color:#fff;font-family:'Inter',sans-serif;}
-  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;vertical-align:middle;}
-  .glass-panel{background:#131314;}
-  .glass-card{background:#1a191b;}
-  .glass-effect{background:#131314;}
-  .text-glow{}
-
-  /* Navigation */
-  .nav-link{position:relative;transition:color 0.3s;color:#94a3b8;text-decoration:none;font-weight:500;}
-  .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#5b90ff;transition:width 0.3s;}
-  .nav-link:hover{color:#f1f5f9;}
-  .nav-link:hover::after{width:100%;}
-  .nav-link.active{color:#60a5fa;font-weight:600;}
-  .nav-link.active::after{width:100%;}
-
-  /* Page transitions */
-  .page{display:none;opacity:0;transition:opacity 0.3s ease;}
-  .page.active{display:block;animation:fadeIn 0.35s ease forwards;}
-  @keyframes fadeIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
-
-  /* Hero animations */
-  @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-  .au1{animation:fadeUp 0.7s 0.05s ease both;}
-  .au2{animation:fadeUp 0.7s 0.2s ease both;}
-  .au3{animation:fadeUp 0.7s 0.35s ease both;}
-  .au4{animation:fadeUp 0.7s 0.5s ease both;}
-
-  /* Mobile menu */
-  #mobileMenu{display:none;flex-direction:column;gap:1rem;padding:1rem 2rem 1.5rem;border-top:1px solid rgba(255,255,255,0.05);}
-  #mobileMenu.open{display:flex;}
-  #mobileMenu a{color:#94a3b8;text-decoration:none;padding:0.5rem 0;transition:color 0.3s;}
-  #mobileMenu a:hover{color:#f1f5f9;}
-  #mobileMenu a.active{color:#60a5fa;font-weight:600;}
-
-  /* Portfolio filters */
-  .filter-btn{cursor:pointer;transition:all 0.25s;border:none;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.875rem;}
-  .filter-btn.active{background:#8aacff;color:#000;}
-  .project-card{transition:opacity 0.35s,filter 0.35s;}
-  .project-card.dimmed{opacity:0.15;pointer-events:none;filter:grayscale(1);}
-
-  /* Calendar */
-  .cal-day{cursor:default;display:flex;align-items:center;justify-content:center;aspect-ratio:1;font-size:0.75rem;color:#adaaab;border-radius:0.5rem;transition:all 0.2s;}
-  .cal-day.avail{background:rgba(0,109,248,0.15);color:#5b90ff;font-weight:700;border:1px solid rgba(0,109,248,0.3);cursor:pointer;}
-  .cal-day.avail:hover{background:rgba(0,109,248,0.35);}
-  .cal-day.picked{background:#006df8;color:#fff;}
-
-  /* Form */
-  .form-success{display:none;}
-  .form-success.show{display:flex;}
-
-  /* Scrollbar */
-  ::-webkit-scrollbar{width:6px;}
-  ::-webkit-scrollbar-track{background:#0e0e0f;}
-  ::-webkit-scrollbar-thumb{background:#262627;border-radius:3px;}
-
-  /* No-scrollbar for filter row */
-  .no-scrollbar{scrollbar-width:none;}
-  .no-scrollbar::-webkit-scrollbar{display:none;}
-</style>
 </head>
 <body>
 
@@ -121,7 +59,7 @@
       <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary-dim/10 border border-primary-dim/20 au1">
         <span class="font-label text-sm font-medium text-primary tracking-widest">NEXT-GEN DIGITAL ARCHITECTURE</span>
       </div>
-      <h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter leading-[0.9] mb-8 au2">
+      <h1 class="text-6xl md:text-8xl font-headline font-normal tracking-tighter leading-[0.9] mb-8 au2">
         We Build Digital <br/>
         <span style="color:#006df8;">Experiences</span> That<br/>Drive Growth
       </h1>
