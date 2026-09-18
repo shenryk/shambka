@@ -6,7 +6,7 @@
 <title>SHAMBKA | Digital Monuments</title>
 <meta name="description" content="Shambka is a premium digital solutions agency dedicated to transforming brands through elite web development, strategic marketing, and iconic branding."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 <link href="styles/styles.css" rel="stylesheet"/>
 <script>
@@ -16,7 +16,7 @@
         colors: {
           "surface-container-low": "#ffffff","primary": "#0b4a4f","surface-container-lowest": "#ffffff","background": "#ffffff","primary-fixed-dim": "#febe15","outline-variant": "#d9c57d","primary-fixed": "#febe15","secondary-container": "#febe15","outline": "#8aa5a7","surface-container-high": "#ffffff","surface-container": "#ffffff","surface-variant": "#fff8df","on-surface": "#0b4a4f","primary-container": "#febe15","primary-dim": "#febe15","surface-container-highest": "#fff8df","surface": "#ffffff","secondary": "#febe15","on-primary": "#0b4a4f","on-primary-fixed": "#0b4a4f","surface-dim": "#ffffff","on-surface-variant": "#0b4a4f","surface-bright":"#ffffff","tertiary-dim":"#601e19"
         },
-        fontFamily: { "headline": ["Inter"], "body": ["Inter"], "label": ["Space Grotesk"] },
+        fontFamily: { "headline": ["Darker Grotesque"], "body": ["Google Sans", "Product Sans", "sans-serif"], "label": ["Google Sans", "Product Sans", "sans-serif"] },
         borderRadius: {"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
       },
     },
@@ -29,7 +29,7 @@
 <nav id="navbar" class="sticky top-0 z-50 border-b" style="background:#0e0e0f;border-color:#1e1e1f;">
   <div class="flex justify-between items-center w-full px-8 py-5 max-w-screen-2xl mx-auto">
     <button onclick="navigate('home')" class="text-2xl font-black tracking-tighter text-slate-50 font-headline hover:text-primary transition-colors bg-transparent border-none cursor-pointer" style="color:#f8fafc;">SHAMBKA</button>
-    <div class="hidden md:flex items-center gap-10 font-['Inter'] tracking-tight">
+    <div class="hidden md:flex items-center gap-10 font-body tracking-tight">
       <button onclick="navigate('services')" class="nav-link active" id="nav-services" style="background:none;border:none;cursor:pointer;font-size:1rem;">Services</button>
       <button onclick="navigate('portfolio')" class="nav-link" id="nav-portfolio" style="background:none;border:none;cursor:pointer;font-size:1rem;">Portfolio</button>
       <button onclick="navigate('about')" class="nav-link" id="nav-about" style="background:none;border:none;cursor:pointer;font-size:1rem;">About</button>
@@ -43,10 +43,10 @@
     </div>
   </div>
   <div id="mobileMenu">
-    <button onclick="navigate('services')" style="background:none;border:none;cursor:pointer;text-align:left;font-size:1rem;font-family:Inter,sans-serif;" id="mnav-services">Services</button>
-    <button onclick="navigate('portfolio')" style="background:none;border:none;cursor:pointer;text-align:left;font-size:1rem;font-family:Inter,sans-serif;" id="mnav-portfolio">Portfolio</button>
-    <button onclick="navigate('about')" style="background:none;border:none;cursor:pointer;text-align:left;font-size:1rem;font-family:Inter,sans-serif;" id="mnav-about">About</button>
-    <button onclick="navigate('contact')" style="background:none;border:none;cursor:pointer;text-align:left;font-size:1rem;font-family:Inter,sans-serif;" id="mnav-contact">Contact</button>
+    <button onclick="navigate('services')" style="background:none;border:none;cursor:pointer;text-align:center;font-size:1rem;font-family:'Google Sans','Product Sans',sans-serif;" id="mnav-services">Services</button>
+    <button onclick="navigate('portfolio')" style="background:none;border:none;cursor:pointer;text-align:center;font-size:1rem;font-family:'Google Sans','Product Sans',sans-serif;" id="mnav-portfolio">Portfolio</button>
+    <button onclick="navigate('about')" style="background:none;border:none;cursor:pointer;text-align:center;font-size:1rem;font-family:'Google Sans','Product Sans',sans-serif;" id="mnav-about">About</button>
+    <button onclick="navigate('contact')" style="background:none;border:none;cursor:pointer;text-align:center;font-size:1rem;font-family:'Google Sans','Product Sans',sans-serif;" id="mnav-contact">Contact</button>
   </div>
 </nav>
 
@@ -61,7 +61,7 @@
       </div>
       <h1 class="text-6xl md:text-8xl font-headline font-normal tracking-tighter leading-[0.9] mb-8 au2">
         We Build Digital <br/>
-        <span style="color:#006df8;">Experiences</span> That<br/>Drive Growth
+        <span style="color:#601e19;"> Experiences</span> <br/> That Drive Growth
       </h1>
       <p class="max-w-2xl mx-auto text-lg md:text-xl text-on-surface-variant leading-relaxed mb-12 au3">
         Shambka is a premium digital solutions agency dedicated to transforming brands through elite web development, strategic marketing, and iconic branding.
@@ -200,7 +200,7 @@
       </div>
       <div class="lg:col-span-5">
         <div class="glass-card rounded-3xl p-8 aspect-square flex flex-col justify-center items-center text-center relative overflow-hidden group">
-          <img class="w-full h-full object-cover absolute inset-0 opacity-40 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWWSBUs3d9WLgCGQqHHfGVo0sKDHQc6rPFr4EJsXSardOHQSS1GNxsprIBzqE0mLa5S3hcPsCmqUj4AIuDAAvmLDouZLViQsCbTN_db9S-mQkjkeX8nw5GEadSisBY71cK8v9CcjLUFzMIatOTSgMMlycknqpIokTtmA43O4o0PpdgnkKs7yKUwgwiGXmBcUBwIM8dW4xKHOqNtCgGl5fs2XpzW05cTxTDE52ZocrTe2k8wLt7wqitaj-D4XK9DpIEOidvys9hPgg" alt="Web Dev"/>
+          <!-- <img class="w-full h-full object-cover absolute inset-0 opacity-40 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWWSBUs3d9WLgCGQqHHfGVo0sKDHQc6rPFr4EJsXSardOHQSS1GNxsprIBzqE0mLa5S3hcPsCmqUj4AIuDAAvmLDouZLViQsCbTN_db9S-mQkjkeX8nw5GEadSisBY71cK8v9CcjLUFzMIatOTSgMMlycknqpIokTtmA43O4o0PpdgnkKs7yKUwgwiGXmBcUBwIM8dW4xKHOqNtCgGl5fs2XpzW05cTxTDE52ZocrTe2k8wLt7wqitaj-D4XK9DpIEOidvys9hPgg" alt="Web Dev"/> -->
           <div class="relative z-10 p-6 rounded-2xl" style="background:#201f21;border:1px solid #262627;">
             <span class="font-label text-primary text-xs uppercase tracking-widest mb-2 block">System Logic</span>
             <div class="text-2xl font-bold font-headline mb-4">Core Performance</div>
@@ -334,13 +334,14 @@
 <!-- ═══════════════════════════════ PAGE: PORTFOLIO ═══════════════════════════════ -->
 <div id="page-portfolio" class="page">
   <section class="relative pt-24 pb-16 px-8 max-w-screen-2xl mx-auto">
-    <div class="max-w-4xl">
-      <div class="inline-flex items-center gap-2 mb-6">
-        <span class="w-12 h-px bg-primary"></span>
-        <span class="font-label text-primary uppercase tracking-[0.2em] text-xs font-bold">Showcase</span>
-      </div>
-      <h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter mb-8 leading-[0.9]">Success Stories</h1>
-      <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl leading-relaxed">We don't just build platforms; we engineer competitive advantages. Explore our digital monuments crafted with precision and purpose.</p>
+    <div class="max-w-screen-xl mx-auto text-center relative z-10">
+      <h1 class="text-6xl md:text-8xl font-headline font-normal tracking-tighter leading-[0.9] mb-8 au2">
+        Success Stories<br/>
+        <!-- <span style="color:#006df8;">Stories</span><br/> -->
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-on-surface-variant leading-relaxed mb-12 au3">
+        We don't just build platforms; we engineer competitive advantages. Explore our digital monuments crafted with precision and purpose.
+      </p>
     </div>
   </section>
 
@@ -404,14 +405,21 @@
   <!-- Hero -->
   <section class="relative flex items-center pt-20 pb-32 overflow-hidden" style="min-height:716px;">
     <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 z-10" style="background:rgba(14,14,15,0.6);"></div>
-      <img class="w-full h-full object-cover opacity-30 grayscale" style="position:absolute;inset:0;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWV1P6fVS0HnQ4YfozAthoEOa_-KkUQ0FOw7OIb_OxjytlqOWTpa9PX6D6yhbSOTN2YhNit9jqJ6M6qAOfNZdcViNjPLhq662_wks0r0wJ2p8DhdcNSIkiaxT4RHanrj7yn3FmKHI7HMArflVOp4qTpJrZg-ItSFaPP3owY6uvHzZcdIZvMraz1uEu9R2j_7yUsis7PkCcAhX5g9nmro3FmZlAMzyDeNWy30JHd-8OJyWxdnl-0ZFkad91OTHwfE5_DqkdcTR_1qY" alt="Studio"/>
+      <div class="absolute inset-0 z-10" style="background:rgba(254, 190, 21, 1);"></div>
+        <img class="w-full h-full object-cover " style="position:absolute;inset:0;" src="https://www.istockphoto.com/illustrations/bridges"/>
     </div>
     <div class="container mx-auto px-8 relative z-20">
       <div class="max-w-4xl">
         <span class="font-label text-primary tracking-[0.4em] text-sm font-semibold mb-6 block uppercase">The Digital Monument</span>
-        <h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter leading-[0.9] mb-8">Architects of the <br/><span style="color:#5b90ff;">Next Frontier</span></h1>
-        <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed font-light">Shambka is a design-engineering studio crafting digital experiences that transcend the ordinary. We build legacy systems through innovation.</p>
+        <div class="max-w-screen-xl mx-auto text-center relative z-10">
+      <h1 class="text-6xl md:text-8xl font-headline font-normal tracking-tighter leading-[0.9] mb-8 au2">
+        Success Stories<br/>
+        <!-- <span style="color:#006df8;">Stories</span><br/> -->
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-on-surface-variant leading-relaxed mb-12 au3">
+        We don't just build platforms; we engineer competitive advantages. Explore our digital monuments crafted with precision and purpose.
+      </p>
+    </div>
       </div>
     </div>
   </section>
@@ -630,7 +638,7 @@
 <footer class="pt-20 pb-10" style="background:#0e0e0f;border-top:1px solid #0f172a;">
   <div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-12 max-w-screen-2xl mx-auto font-['Space_Grotesk'] text-sm tracking-wide">
     <div class="md:col-span-1">
-      <button onclick="navigate('home')" class="text-xl font-bold text-slate-50 mb-6 block hover:text-primary transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;">SHAMBKA</button>
+      <button onclick="navigate('home')" class="text-xl font-bold text-slate-50 mb-6 block hover:text-primary transition-colors font-headline" style="background:none;border:none;cursor:pointer;">SHAMBKA</button>
       <p class="text-slate-500 leading-relaxed">Digital monuments for the visionaries of tomorrow. We craft experiences that resonate across the digital ether.</p>
       <div class="flex gap-4 mt-6">
         <button onclick="navigate('contact')" class="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:text-primary transition-colors" style="background:#201f21;border:none;cursor:pointer;"><span class="material-symbols-outlined" style="font-size:20px;">public</span></button>
@@ -641,19 +649,19 @@
     <div>
       <h4 class="text-slate-50 font-bold mb-6">Navigation</h4>
       <ul class="space-y-4">
-        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;">Services</button></li>
-        <li><button onclick="navigate('portfolio')" class="text-slate-500 hover:text-blue-400 transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;">Portfolio</button></li>
-        <li><button onclick="navigate('about')" class="text-slate-500 hover:text-blue-400 transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;">About Us</button></li>
-        <li><button onclick="navigate('contact')" class="text-slate-500 hover:text-blue-400 transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;">Contact</button></li>
+        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors font-body" style="background:none;border:none;cursor:pointer;font-size:0.875rem;">Services</button></li>
+        <li><button onclick="navigate('portfolio')" class="text-slate-500 hover:text-blue-400 transition-colors font-body" style="background:none;border:none;cursor:pointer;font-size:0.875rem;">Portfolio</button></li>
+        <li><button onclick="navigate('about')" class="text-slate-500 hover:text-blue-400 transition-colors font-body" style="background:none;border:none;cursor:pointer;font-size:0.875rem;">About Us</button></li>
+        <li><button onclick="navigate('contact')" class="text-slate-500 hover:text-blue-400 transition-colors font-body" style="background:none;border:none;cursor:pointer;font-size:0.875rem;">Contact</button></li>
       </ul>
     </div>
     <div>
       <h4 class="text-slate-50 font-bold mb-6">Services</h4>
       <ul class="space-y-4">
-        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;">Web Development</button></li>
-        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;">Brand Identity</button></li>
-        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;">Growth Marketing</button></li>
-        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors" style="background:none;border:none;cursor:pointer;font-family:'Space Grotesk',sans-serif;font-size:0.875rem;">App Development</button></li>
+        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors font-body" style="background:none;border:none;cursor:pointer;font-size:0.875rem;">Web Development</button></li>
+        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors font-body" style="background:none;border:none;cursor:pointer;font-size:0.875rem;">Brand Identity</button></li>
+        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors font-body" style="background:none;border:none;cursor:pointer;font-size:0.875rem;">Growth Marketing</button></li>
+        <li><button onclick="navigate('services')" class="text-slate-500 hover:text-blue-400 transition-colors font-body" style="background:none;border:none;cursor:pointer;font-size:0.875rem;">App Development</button></li>
       </ul>
     </div>
     <div>
