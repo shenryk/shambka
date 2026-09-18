@@ -347,45 +347,20 @@
 
   <!-- Filters -->
   <section class="px-8 mb-16 max-w-screen-2xl mx-auto">
-    <div class="flex items-center gap-4 overflow-x-auto no-scrollbar pb-4">
+    <div class="portfolio-categories flex items-center gap-4 overflow-x-auto no-scrollbar pb-4">
       <button class="filter-btn active px-8 py-3 rounded-full" onclick="filterWork('all',this)">All Work</button>
-      <button class="filter-btn px-8 py-3 rounded-full" style="background:#201f21;color:#adaaab;" onclick="filterWork('web',this)">Web</button>
+      <button class="filter-btn px-8 py-3 rounded-full" style="background:#201f21;color:#adaaab;" onclick="filterWork('software',this)">Software Development</button>
       <button class="filter-btn px-8 py-3 rounded-full" style="background:#201f21;color:#adaaab;" onclick="filterWork('branding',this)">Branding</button>
       <button class="filter-btn px-8 py-3 rounded-full" style="background:#201f21;color:#adaaab;" onclick="filterWork('marketing',this)">Marketing</button>
+      <button class="filter-btn px-8 py-3 rounded-full" style="background:#201f21;color:#adaaab;" onclick="filterWork('digital-marketing',this)">Digital Marketing</button>
+      <button class="filter-btn px-8 py-3 rounded-full" style="background:#201f21;color:#adaaab;" onclick="filterWork('content-video',this)">Content &amp; Video Production</button>
+      <button class="filter-btn px-8 py-3 rounded-full" style="background:#201f21;color:#adaaab;" onclick="filterWork('more',this)">More</button>
     </div>
   </section>
 
-  <!-- Grid -->
-  <section class="px-8 max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 pb-32">
-    <div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low project-card" data-cat="web" style="height:600px;">
-      <img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6DdDNWt3T4u_42fZpkVa3L2n3bcDvb-XQL2KLkf0KfgXd2WOBPXH_SHy5kHx8XMDPcgjYivR2L-M1d8HMpTGPgZxf8csj9ehaq0aWTYcTVEYUnLwyYGeb9vR5zMPFzbVyC403NUwWPrIL2-HK63TOaE-mhQJkBv-pSZpFTWwEoFnhpM1bECtbPyQImQKnbzh4Bkor3KrzzgtMAIQShgkdDJ6iWWbQKZLQiCsI5Y3E6U2qFOUGs25TWtoCMIrDxYeSsatDT5AZIq8" alt="Nexus Capital"/>
-      <div class="absolute inset-0" style="background:rgba(14,14,15,0.55);"></div>
-      <div class="absolute bottom-0 left-0 p-10 w-full">
-        <div class="flex justify-between items-end">
-          <div><span class="font-label text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Fintech / Web Engineering</span><h3 class="text-4xl font-headline font-bold text-white mb-2">Nexus Capital</h3><p class="text-on-surface-variant font-medium">A frictionless global trading infrastructure.</p></div>
-          <div class="text-right hidden sm:block"><span class="text-5xl font-headline font-black text-primary block leading-none tracking-tighter">+200%</span><span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Revenue Increase</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low project-card" data-cat="branding" style="min-height:400px;">
-      <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtkjmFPVWqkvf0tsA3aceBjGLSXMPhgjeVAjDB-ub7dCJ0nGDnSYEQGlsOBld-OC9bVQtRE16VNJBGWrQ6Z-8XienvTu29MC77FwdN-wRMo92D9hxIUk8tzhoFjpDwbcyrDdahd-Z_xdJCCBQlCuIaX_5PfaSVbmvBYPtMQyIMKTVrOU6kwtElyYqhwNgSVAJAedXiLSMGHWaihBiAkYsH4DwbzcIyNECApGlst_r5NFSNUQU93EqgJQ00I8-reayrdq4XGuzyltw" alt="Aura Organics"/>
-      <div class="absolute inset-0 group-hover:opacity-0 transition-colors" style="background:rgba(14,14,15,0.4);"></div>
-      <div class="absolute bottom-0 left-0 p-8"><span class="font-label text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Skincare / Branding</span><h3 class="text-2xl font-headline font-bold text-white mb-2">Aura Organics</h3><div class="mt-4"><span class="text-2xl font-headline font-black text-white block leading-none">40%</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Market Expansion</span></div></div>
-    </div>
-    <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low project-card" data-cat="marketing" style="min-height:400px;">
-      <img class="absolute inset-0 w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXvqrpxnnR__liS1cVQwOEXh8_AWJCh5vBe53v4Zo_-1EUb-50koC3XuNCpOGEjX4tT5NGRwW5h_YHH5UBdwlMfZ3lfelIA_d7E-8qDLOem99LcFy0jnsxEYURVujJ0tQ41NANc883P4ANTQI4jNqCr-yXBP6NduKOy11CsKbUbSN8aal0ZXtnFuHWXWHkwXPxdFm3C8CRGCvs6u0bBXpal10mHVJN1wSJgCXSaWsLkS8kKL23VVwe5JBuejUyf6EeCMXxN8OYnr0" alt="Synthetix AI"/>
-      <div class="absolute inset-0" style="background:rgba(14,14,15,0.5);"></div>
-      <div class="absolute bottom-0 left-0 p-8"><span class="font-label text-primary text-xs font-bold uppercase tracking-widest mb-2 block">AI SaaS / Marketing</span><h3 class="text-2xl font-headline font-bold text-white mb-2">Synthetix AI</h3><div class="mt-4"><span class="text-2xl font-headline font-black text-white block leading-none">150k+</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Monthly Active Users</span></div></div>
-    </div>
-    <div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low project-card" data-cat="web" style="min-height:300px;">
-      <img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPRPFWJJp-TbPMF1upkWO1X9yJM_BdzzFOQGMZEUJx4g1egVgiAPSKqDW2wELW7AZlcp_0JmlDSlTDLKqRjMZgEkKvB3HOTkEps8Wm7oko3QYxqiSISOlPj8jg7p4HkbFIDrthA_-gRC9aVZ81EiMLGQ" alt="Vanguard Fleet"/>
-      <div class="absolute inset-0 p-10 flex flex-col justify-end" style="background:rgba(14,14,15,0.55);">
-        <div class="flex justify-between items-end">
-          <div><span class="font-label text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Logistics / Web Platform</span><h3 class="text-3xl font-headline font-bold text-white mb-2">Vanguard Fleet</h3><p class="text-on-surface-variant hidden md:block">Real-time supply chain optimization.</p></div>
-          <div class="text-right"><span class="text-4xl font-headline font-black text-primary block leading-none tracking-tighter">-35%</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Operational Costs</span></div>
-        </div>
-      </div>
-    </div>
+  <!-- Carousel -->
+  <section class="portfolio-carousel-wrap px-8 max-w-screen-2xl mx-auto pb-32">
+    <div id="portfolioCarousel" class="portfolio-carousel" aria-label="Portfolio projects"></div>
   </section>
 
   <!-- CTA -->
@@ -577,7 +552,7 @@
         <div class="space-y-6">
           <div class="flex items-start gap-4">
             <div class="p-3 rounded-xl" style="background:#201f21;"><span class="material-symbols-outlined" style="color:#006df8;">alternate_email</span></div>
-            <div><h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-medium mb-1">Email</h4><a href="mailto:hello@shambkaltd.com" class="text-xl font-headline font-semibold hover:text-primary transition-colors" style="color:#fff;text-decoration:none;">hello@shambkaltd.com</a></div>
+            <div><h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-medium mb-1">Email</h4><a href="mailto:hello@shambka.online" class="text-xl font-headline font-semibold hover:text-primary transition-colors" style="color:#fff;text-decoration:none;">hello@shambkaltd.com</a></div>
           </div>
           <div class="flex items-start gap-4">
             <div class="p-3 rounded-xl" style="background:#201f21;"><span class="material-symbols-outlined" style="color:#006df8;">call</span></div>
@@ -738,7 +713,46 @@
     else { updateNav('home'); if (current === 'contact') renderCalendar(); }
   });
 
-  // ── Portfolio Filter ─────────────────────────────────────────────────────────
+  // ── Portfolio Carousel ──────────────────────────────────────────────────────
+  const PORTFOLIO_IMAGES = [
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuA6DdDNWt3T4u_42fZpkVa3L2n3bcDvb-XQL2KLkf0KfgXd2WOBPXH_SHy5kHx8XMDPcgjYivR2L-M1d8HMpTGPgZxf8csj9ehaq0aWTYcTVEYUnLwyYGeb9vR5zMPFzbVyC403NUwWPrIL2-HK63TOaE-mhQJkBv-pSZpFTWwEoFnhpM1bECtbPyQImQKnbzh4Bkor3KrzzgtMAIQShgkdDJ6iWWbQKZLQiCsI5Y3E6U2qFOUGs25TWtoCMIrDxYeSsatDT5AZIq8',
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuBtkjmFPVWqkvf0tsA3aceBjGLSXMPhgjeVAjDB-ub7dCJ0nGDnSYEQGlsOBld-OC9bVQtRE16VNJBGWrQ6Z-8XienvTu29MC77FwdN-wRMo92D9hxIUk8tzhoFjpDwbcyrDdahd-Z_xdJCCBQlCuIaX_5PfaSVbmvBYPtMQyIMKTVrOU6kwtElyYqhwNgSVAJAedXiLSMGHWaihBiAkYsH4DwbzcIyNECApGlst_r5NFSNUQU93EqgJQ00I8-reayrdq4XGuzyltw',
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuBXvqrpxnnR__liS1cVQwOEXh8_AWJCh5vBe53v4Zo_-1EUb-50koC3XuNCpOGEjX4tT5NGRwW5h_YHH5UBdwlMfZ3lfelIA_d7E-8qDLOem99LcFy0jnsxEYURVujJ0tQ41NANc883P4ANTQI4jNqCr-yXBP6NduKOy11CsKbUbSN8aal0ZXtnFuHWXWHkwXPxdFm3C8CRGCvs6u0bBXpal10mHVJN1wSJgCXSaWsLkS8kKL23VVwe5JBuejUyf6EeCMXxN8OYnr0',
+    'https://lh3.googleusercontent.com/aida-public/AB6AXuAPRPFWJJp-TbPMF1upkWO1X9yJM_BdzzFOQGMZEUJx4g1egVgiAPSKqDW2wELW7AZlcp_0JmlDSlTDLKqRjMZgEkKvB3HOTkEps8Wm7oko3QYxqiSISOlPj8jg7p4HkbFIDrthA_-gRC9aVZ81EiMLGQ'
+  ];
+  const PORTFOLIO_CATEGORIES = {
+    software: ['Nexus Capital', 'Vanguard Fleet', 'Atlas Cloud', 'Pulse Commerce', 'Orbit Health'],
+    branding: ['Aura Organics', 'Morrow House', 'Northline Studio', 'Kite & Co.', 'Field Notes'],
+    marketing: ['Synthetix AI', 'Common Ground', 'Signal House', 'Good Measure', 'Brightline'],
+    'digital-marketing': ['Growth Engine', 'Metric House', 'Launch Lab', 'Demand Works', 'Searchlight'],
+    'content-video': ['Frame Theory', 'Motion House', 'The Edit Room', 'Storyline', 'Lens & Light'],
+    more: ['Aster Events', 'Civic Works', 'Open Atlas', 'Kindred Systems', 'Monument Labs']
+  };
+  const PORTFOLIO_LABELS = {
+    software: 'Software Development', branding: 'Branding', marketing: 'Marketing',
+    'digital-marketing': 'Digital Marketing', 'content-video': 'Content & Video Production', more: 'More'
+  };
+
+  function renderPortfolio(cat = 'all') {
+    const carousel = document.getElementById('portfolioCarousel');
+    if (!carousel) return;
+    const categories = cat === 'all' ? Object.keys(PORTFOLIO_CATEGORIES) : [cat];
+    let index = 0;
+    carousel.innerHTML = categories.flatMap(category => PORTFOLIO_CATEGORIES[category].map((name, itemIndex) => {
+      const label = PORTFOLIO_LABELS[category];
+      const description = category === 'software' ? 'Digital systems built for scale and clarity.' : 'A considered experience designed to move people.';
+      const image = PORTFOLIO_IMAGES[index++ % PORTFOLIO_IMAGES.length];
+      return `<article class="portfolio-card project-card" data-cat="${category}">
+        <img src="${image}" alt="${name}">
+        <div class="portfolio-card-content">
+          <span class="portfolio-card-category">${label} / ${String(itemIndex + 1).padStart(2, '0')}</span>
+          <h3>${name}</h3>
+          <p>${description}</p>
+        </div>
+      </article>`;
+    })).join('');
+  }
+
   function filterWork(cat, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => {
       b.classList.remove('active');
@@ -748,11 +762,10 @@
     btn.classList.add('active');
     btn.style.background = '';
     btn.style.color = '';
-    document.querySelectorAll('.project-card').forEach(card => {
-      if (cat === 'all' || card.dataset.cat === cat) card.classList.remove('dimmed');
-      else card.classList.add('dimmed');
-    });
+    renderPortfolio(cat);
   }
+
+  renderPortfolio();
 
   // ── Contact Form ─────────────────────────────────────────────────────────────
   function handleFormSubmit(e) {
